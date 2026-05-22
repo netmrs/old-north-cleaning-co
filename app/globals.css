@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #172434;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #dceef7;
+  color: #062446;
+}
+
+.section {
+  width: min(1180px, calc(100% - 32px));
+  @apply mx-auto py-16 md:py-24;
+}
+
+.eyebrow {
+  @apply mb-3 text-xs font-black uppercase tracking-normal text-brass;
+}
+
+.h1 {
+  @apply text-5xl font-black leading-none tracking-normal text-white md:text-7xl lg:text-8xl;
+}
+
+.h2 {
+  @apply text-3xl font-black leading-tight tracking-normal text-navy md:text-5xl;
+}
+
+.body-large {
+  @apply text-lg leading-8 text-slate-600;
+}
+
+.button {
+  @apply inline-flex min-h-12 items-center justify-center rounded-brand px-5 py-3 text-sm font-black transition;
+}
+
+.button-primary {
+  @apply bg-brass text-slate-950 hover:bg-[#ca9a56];
+}
+
+.button-secondary {
+  @apply border border-white/40 text-white hover:bg-white/10;
+}
+
+.button-outline {
+  @apply border border-slate-300 text-navy hover:border-harbor hover:text-harbor;
+}
+
+.field {
+  @apply grid gap-2 text-sm font-black text-navy;
+}
+
+.field-input {
+  @apply min-h-12 w-full rounded-brand border border-slate-300 bg-white px-3 py-3 font-normal text-ink outline-none transition focus:border-harbor focus:ring-4 focus:ring-harbor/20;
+}

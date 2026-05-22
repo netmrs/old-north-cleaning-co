@@ -1,0 +1,12 @@
+.git/
+.repo*/
+.DS_Store
+Thumbs.db
+node_modules/
+.npm-cache/
+.next/
+.vercel/
+dist/
+.env
+.env.local
+/assets/
