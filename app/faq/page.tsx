@@ -39,7 +39,7 @@ export default function FAQPage() {
     <main>
       <section className="section">
         <p className="eyebrow">FAQ</p>
-        <h1 className="max-w-4xl text-5xl font-black leading-none text-navy md:text-7xl">Answers before the walkthrough.</h1>
+        <h1 className="max-w-4xl font-display text-5xl font-black leading-none text-navy md:text-7xl">Answers before the walkthrough.</h1>
         <p className="body-large mt-6 max-w-3xl">
           Short answers for the questions that usually come up before a commercial cleaning buyer reaches out.
         </p>
@@ -50,7 +50,7 @@ export default function FAQPage() {
           {faqs.map((faq, index) => (
             <article key={faq.question} className="surface grid gap-5 p-6 md:grid-cols-[70px_0.8fr_1.2fr] md:items-start">
               <span className="text-sm font-black text-brass">{String(index + 1).padStart(2, "0")}</span>
-              <h2 className="text-2xl font-black text-navy">{faq.question}</h2>
+              <h2 className="font-display text-2xl font-black text-navy">{faq.question}</h2>
               <p className="leading-8 text-slate-600">{faq.answer}</p>
             </article>
           ))}

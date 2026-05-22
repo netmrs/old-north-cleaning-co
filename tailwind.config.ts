@@ -7,6 +7,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ["Montserrat Variable", "Montserrat", "Arial", "sans-serif"],
+        sans: ["Manrope Variable", "Manrope", "Arial", "sans-serif"]
+      },
       colors: {
         navy: "#06192f",
         harbor: "#2b6f91",

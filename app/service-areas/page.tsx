@@ -52,7 +52,7 @@ export default function ServiceAreasPage() {
       <section className="bg-navy bg-hero-grid bg-[length:auto,auto,48px_48px,48px_48px] text-white">
         <div className="section">
           <p className="eyebrow">Service Areas</p>
-          <h1 className="max-w-5xl text-5xl font-black leading-none md:text-7xl">
+          <h1 className="max-w-5xl font-display text-5xl font-black leading-none md:text-7xl">
             Local commercial cleaning across the Triangle.
           </h1>
           <p className="mt-6 max-w-3xl text-xl leading-9 text-white/80">
@@ -70,7 +70,7 @@ export default function ServiceAreasPage() {
           >
             <div>
               <p className="text-xs font-black uppercase text-brass">{area.city}</p>
-              <h2 className="mt-2 text-3xl font-black text-navy">{area.title}</h2>
+              <h2 className="mt-2 font-display text-3xl font-black text-navy">{area.title}</h2>
             </div>
             <div className="mt-5 md:mt-0">
               <p className="leading-8 text-slate-600">{area.text}</p>

@@ -15,12 +15,12 @@ export function Footer() {
           />
         </div>
         <div>
-          <p className="text-xl font-black text-navy">Commercial cleaning across the Triangle.</p>
+          <p className="font-display text-xl font-black text-navy">Commercial cleaning across the Triangle.</p>
           <p className="mt-2 max-w-xl text-sm leading-6 text-slate-600">
             Raleigh, Cary, Apex, Morrisville, Durham, and nearby business communities.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3 text-sm font-black text-navy md:justify-end">
+        <div className="flex flex-wrap gap-3 font-display text-sm font-black text-navy md:justify-end">
           <Link href="/services">Services</Link>
           <Link href="/service-areas">Service Areas</Link>
           <Link href="/contact">Contact</Link>

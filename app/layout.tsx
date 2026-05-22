@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import "@fontsource-variable/montserrat";
+import "@fontsource-variable/manrope";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";

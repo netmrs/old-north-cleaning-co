@@ -23,7 +23,7 @@ export function Header() {
           <span className="grid h-12 w-12 place-items-center rounded-brand border border-slate-200 bg-white shadow-sm">
             <Image src="/assets/onc-mark.png" alt="" width={42} height={42} className="h-10 w-10 object-contain" priority />
           </span>
-          <span className="max-w-[170px] text-sm font-black leading-tight tracking-normal md:max-w-none md:text-base">
+          <span className="max-w-[170px] font-display text-sm font-black leading-tight tracking-normal md:max-w-none md:text-base">
             Old North Cleaning Co
           </span>
         </Link>
@@ -52,7 +52,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-brand px-3 py-3 text-sm font-black text-ink transition hover:bg-clean hover:text-harbor"
+                className="rounded-brand px-3 py-3 font-display text-sm font-black text-ink transition hover:bg-clean hover:text-harbor"
                 onClick={() => setOpen(false)}
               >
                 {item.label}

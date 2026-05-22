@@ -64,7 +64,7 @@ export default function ServicesPage() {
       <section className="bg-navy bg-hero-grid bg-[length:auto,auto,48px_48px,48px_48px] text-white">
         <div className="section py-20">
           <p className="eyebrow">Services</p>
-          <h1 className="max-w-4xl text-5xl font-black leading-none md:text-7xl">
+          <h1 className="max-w-4xl font-display text-5xl font-black leading-none md:text-7xl">
             Commercial cleaning services, clearly scoped.
           </h1>
           <p className="mt-6 max-w-3xl text-xl leading-9 text-white/80">
@@ -85,7 +85,7 @@ export default function ServicesPage() {
             </span>
             <div>
               <p className="text-xs font-black uppercase text-brass">{service.label}</p>
-              <h2 className="mt-2 text-3xl font-black leading-tight text-navy">{service.title}</h2>
+              <h2 className="mt-2 font-display text-3xl font-black leading-tight text-navy">{service.title}</h2>
             </div>
             <p className="mt-4 leading-8 text-slate-600 md:mt-0">{service.text}</p>
           </article>

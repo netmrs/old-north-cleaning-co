@@ -9,6 +9,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/montserrat": "^5.2.8",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

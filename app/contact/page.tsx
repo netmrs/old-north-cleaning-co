@@ -20,12 +20,12 @@ export default function ContactPage() {
       <section id="get-a-quote" className="section grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
         <div>
           <p className="eyebrow">Contact</p>
-          <h1 className="text-5xl font-black leading-none text-navy md:text-7xl">Request a Walkthrough</h1>
+          <h1 className="font-display text-5xl font-black leading-none text-navy md:text-7xl">Request a Walkthrough</h1>
           <p className="body-large mt-6">
             This is the best first step for commercial cleaning. Share the basics, then Old North Cleaning Co can walk the space and prepare a practical scope.
           </p>
           <div className="mt-8 rounded-brand border border-slate-200 bg-white p-5 shadow-sm">
-            <p className="font-black text-navy">What happens next</p>
+            <p className="font-display font-black text-navy">What happens next</p>
             <div className="mt-4 grid gap-3">
               {afterSubmit.map((item, index) => (
                 <div key={item} className="grid grid-cols-[34px_1fr] gap-3">
@@ -38,7 +38,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="mt-4 rounded-brand border border-slate-200 bg-[#eef3f1] p-5">
-            <p className="font-black text-navy">Preferred walkthrough times</p>
+            <p className="font-display font-black text-navy">Preferred walkthrough times</p>
             <p className="mt-2 text-slate-600">Weekday evenings, Saturday, or Sunday.</p>
           </div>
         </div>

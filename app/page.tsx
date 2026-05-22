@@ -62,11 +62,11 @@ export default function HomePage() {
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
               <div className="rounded-brand border border-white/15 bg-white/10 p-5">
-                <p className="text-4xl font-black">24 hr</p>
+                <p className="font-display text-4xl font-black">24 hr</p>
                 <p className="mt-2 text-sm font-bold leading-6 text-white/72">walkthrough response target</p>
               </div>
               <div className="rounded-brand border border-white/15 bg-white/10 p-5">
-                <p className="text-4xl font-black">5</p>
+                <p className="font-display text-4xl font-black">5</p>
                 <p className="mt-2 text-sm font-bold leading-6 text-white/72">Triangle markets served</p>
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function HomePage() {
       <section className="-mt-8 relative z-10">
         <div className="mx-auto grid w-[min(1160px,calc(100%_-_32px))] gap-3 rounded-brand border border-slate-200 bg-white p-3 shadow-lift md:grid-cols-4">
           {proofItems.map((item) => (
-            <div key={item} className="rounded-brand bg-clean px-4 py-5 text-center text-sm font-black text-navy">
+            <div key={item} className="rounded-brand bg-clean px-4 py-5 text-center font-display text-sm font-black text-navy">
               {item}
             </div>
           ))}
@@ -104,7 +104,7 @@ export default function HomePage() {
               </div>
               <div>
                 <p className="text-xs font-black uppercase text-brass">{service.eyebrow}</p>
-                <h3 className="mt-1 text-2xl font-black text-navy">{service.title}</h3>
+                <h3 className="mt-1 font-display text-2xl font-black text-navy">{service.title}</h3>
                 <p className="mt-2 leading-7 text-slate-600">{service.text}</p>
                 <p className="mt-3 text-sm font-bold text-steel">{service.bestFor}</p>
               </div>
@@ -124,7 +124,7 @@ export default function HomePage() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {operatingPrinciples.map((item) => (
-              <div key={item} className="rounded-brand border border-slate-200 bg-clean p-5 text-lg font-black text-navy">
+              <div key={item} className="rounded-brand border border-slate-200 bg-clean p-5 font-display text-lg font-black text-navy">
                 {item}
               </div>
             ))}
@@ -141,7 +141,7 @@ export default function HomePage() {
           {process.map((item) => (
             <article key={item.step} className="surface p-6">
               <span className="text-sm font-black text-brass">{item.step}</span>
-              <h3 className="mt-8 text-2xl font-black text-navy">{item.title}</h3>
+              <h3 className="mt-8 font-display text-2xl font-black text-navy">{item.title}</h3>
               <p className="mt-4 leading-8 text-slate-600">{item.text}</p>
             </article>
           ))}
@@ -165,7 +165,7 @@ export default function HomePage() {
                 className="group rounded-brand border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:shadow-soft"
               >
                 <span className="text-sm font-black uppercase text-brass">Commercial cleaning</span>
-                <span className="mt-2 block text-3xl font-black text-navy group-hover:text-harbor">{area}</span>
+                <span className="mt-2 block font-display text-3xl font-black text-navy group-hover:text-harbor">{area}</span>
               </Link>
             ))}
           </div>
