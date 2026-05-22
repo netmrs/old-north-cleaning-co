@@ -7,6 +7,8 @@ node_modules/
 .next/
 .vercel/
 dist/
+*.log
+.gh-netmrs/
 .env
 .env.local
 /assets/

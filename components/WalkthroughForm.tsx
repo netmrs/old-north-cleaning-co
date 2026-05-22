@@ -37,7 +37,13 @@ export function WalkthroughForm({ compact = false }: { compact?: boolean }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4 rounded-brand border border-slate-200 bg-white p-5 shadow-soft md:grid-cols-2">
+    <form onSubmit={handleSubmit} className="grid gap-4 rounded-brand border border-slate-200 bg-white p-5 shadow-lift md:grid-cols-2">
+      <div className="md:col-span-2">
+        <p className="text-sm font-black uppercase text-brass">Walkthrough request</p>
+        <p className="mt-2 text-sm leading-6 text-slate-600">
+          Share enough detail to make the first call useful. No online booking pressure.
+        </p>
+      </div>
       <label className="field">
         Name
         <input className="field-input" name="name" autoComplete="name" required />
@@ -98,7 +104,7 @@ export function WalkthroughForm({ compact = false }: { compact?: boolean }) {
       <button className="button button-primary md:col-span-2" type="submit" disabled={state === "sending"}>
         {state === "sending" ? "Sending..." : "Request a Walkthrough"}
       </button>
-      <p className="md:col-span-2 text-sm text-slate-600" aria-live="polite">
+      <p className="text-sm text-slate-600 md:col-span-2" aria-live="polite">
         {messageForState(state)}
       </p>
     </form>

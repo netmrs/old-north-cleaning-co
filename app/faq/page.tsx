@@ -37,23 +37,24 @@ const faqs = [
 export default function FAQPage() {
   return (
     <main>
-      <section className="bg-clean">
-        <div className="section">
-          <p className="eyebrow">FAQ</p>
-          <h1 className="max-w-4xl text-5xl font-black leading-none text-navy md:text-7xl">Answers before the walkthrough.</h1>
-          <p className="body-large mt-6 max-w-3xl">
-            These questions reduce friction before a business reaches out.
-          </p>
-        </div>
+      <section className="section">
+        <p className="eyebrow">FAQ</p>
+        <h1 className="max-w-4xl text-5xl font-black leading-none text-navy md:text-7xl">Answers before the walkthrough.</h1>
+        <p className="body-large mt-6 max-w-3xl">
+          Short answers for the questions that usually come up before a commercial cleaning buyer reaches out.
+        </p>
       </section>
 
-      <section className="section grid gap-4">
-        {faqs.map((faq) => (
-          <article key={faq.question} className="rounded-brand border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="text-2xl font-black text-navy">{faq.question}</h2>
-            <p className="mt-3 leading-8 text-slate-600">{faq.answer}</p>
-          </article>
-        ))}
+      <section className="bg-white">
+        <div className="section grid gap-4">
+          {faqs.map((faq, index) => (
+            <article key={faq.question} className="surface grid gap-5 p-6 md:grid-cols-[70px_0.8fr_1.2fr] md:items-start">
+              <span className="text-sm font-black text-brass">{String(index + 1).padStart(2, "0")}</span>
+              <h2 className="text-2xl font-black text-navy">{faq.question}</h2>
+              <p className="leading-8 text-slate-600">{faq.answer}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <CTA />

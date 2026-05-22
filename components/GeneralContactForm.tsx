@@ -36,7 +36,7 @@ export function GeneralContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4 rounded-brand border border-slate-200 bg-clean p-5">
+    <form onSubmit={handleSubmit} className="grid gap-4 rounded-brand border border-slate-200 bg-white p-5 shadow-soft">
       <label className="field">
         Name
         <input className="field-input" name="name" required />

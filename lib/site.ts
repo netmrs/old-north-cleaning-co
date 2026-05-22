@@ -4,26 +4,43 @@ export const services = [
   {
     title: "Office Cleaning",
     href: "/services#office-cleaning",
-    text: "Consistent cleaning for desks, kitchens, restrooms, floors, entries, and shared work areas."
+    eyebrow: "Offices and suites",
+    text: "Consistent cleaning for desks, kitchens, restrooms, floors, entries, and shared work areas.",
+    bestFor: "Professional offices, agencies, coworking, admin suites"
   },
   {
     title: "Medical Offices",
     href: "/services#medical-offices",
-    text: "Detail-focused cleaning for non-clinical medical and dental office environments."
+    eyebrow: "Non-clinical spaces",
+    text: "Detail-focused cleaning for non-clinical medical and dental office environments.",
+    bestFor: "Dental, therapy, wellness, and care offices"
   },
   {
     title: "Churches",
     href: "/services#churches",
-    text: "Flexible cleaning for worship spaces, classrooms, restrooms, and gathering areas."
+    eyebrow: "Weekly-use spaces",
+    text: "Flexible cleaning for worship spaces, classrooms, restrooms, and gathering areas.",
+    bestFor: "Sanctuaries, classrooms, nurseries, lobbies"
   },
   {
     title: "Gyms/Fitness Studios",
     href: "/services#fitness-studios",
-    text: "High-touch cleaning for studios, restrooms, changing areas, equipment zones, and lobbies."
+    eyebrow: "High-touch traffic",
+    text: "High-touch cleaning for studios, restrooms, changing areas, equipment zones, and lobbies.",
+    bestFor: "Boutique fitness, training studios, yoga, wellness"
   },
   {
     title: "Property Management",
     href: "/services#common-areas",
-    text: "Common-area cleaning for lobbies, corridors, stairwells, elevators, and shared amenities."
+    eyebrow: "Common areas",
+    text: "Common-area cleaning for lobbies, corridors, stairwells, elevators, and shared amenities.",
+    bestFor: "Managed properties, shared buildings, amenity spaces"
   }
+];
+
+export const operatingPrinciples = [
+  "Walkthrough-first proposals",
+  "Documented recurring scopes",
+  "After-hours availability",
+  "Fast issue communication"
 ];
