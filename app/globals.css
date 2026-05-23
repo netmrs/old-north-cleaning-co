@@ -53,7 +53,7 @@ a {
 }
 
 .h1 {
-  @apply font-display text-5xl font-black leading-[0.94] tracking-normal text-white md:text-7xl lg:text-8xl;
+  @apply font-display text-5xl font-black leading-[0.96] tracking-normal text-white md:text-6xl lg:text-7xl;
 }
 
 .h2 {

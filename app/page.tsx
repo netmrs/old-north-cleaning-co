@@ -15,13 +15,18 @@ export default function HomePage() {
   return (
     <main>
       <section className="relative overflow-hidden bg-navy bg-hero-grid bg-[length:auto,auto,48px_48px,48px_48px] text-white">
-        <div className="section grid min-h-[calc(100vh-76px)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="section grid min-h-[calc(100vh-76px)] items-center gap-12 py-16 lg:grid-cols-[0.98fr_1.02fr]">
           <div className="fade-up">
             <p className="eyebrow">Old North Cleaning Co</p>
-            <h1 className="h1 max-w-5xl">Commercial Cleaning Across the Triangle</h1>
+            <h1 className="h1 max-w-4xl">Commercial Cleaning Across the Triangle</h1>
             <p className="mt-7 max-w-3xl text-xl leading-9 text-white/82">
               Reliable office and facility cleaning for businesses in Raleigh, Cary, Apex, Morrisville, and Durham.
             </p>
+            <div className="mt-6 flex max-w-3xl flex-wrap gap-2 text-sm font-bold text-white/78">
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-2">Fully insured</span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-2">Raleigh-based</span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-3 py-2">After-hours available</span>
+            </div>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link href="/contact" className="button button-primary shadow-soft">
                 Request a Walkthrough
@@ -32,7 +37,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="glass fade-up p-5">
+          <div className="glass fade-up p-4">
             <div className="rounded-brand bg-white p-6">
               <Image
                 src="/assets/old-north-logo.png"
@@ -44,21 +49,13 @@ export default function HomePage() {
               />
             </div>
             <div className="mt-4 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-brand border border-white/15 bg-white/10 p-5">
-                <p className="font-display text-4xl font-black">24 hr</p>
-                <p className="mt-2 text-sm font-bold leading-6 text-white/72">walkthrough response target</p>
+              <div className="rounded-brand border border-white/15 bg-white/10 p-4">
+                <p className="font-display text-3xl font-black">5</p>
+                <p className="mt-1 text-sm font-bold leading-6 text-white/72">Triangle markets</p>
               </div>
-              <div className="rounded-brand border border-white/15 bg-white/10 p-5">
-                <p className="font-display text-4xl font-black">5</p>
-                <p className="mt-2 text-sm font-bold leading-6 text-white/72">Triangle markets served</p>
-              </div>
-            </div>
-            <div className="mt-4 rounded-brand border border-white/15 bg-white/10 p-5">
-              <p className="font-display text-sm font-black uppercase text-brass">Facility signals</p>
-              <div className="mt-4 grid gap-2 text-sm font-bold text-white/78">
-                <span>Lobby and entry presentation</span>
-                <span>Restroom and breakroom readiness</span>
-                <span>Touchpoint and trash closeout</span>
+              <div className="rounded-brand border border-white/15 bg-white/10 p-4">
+                <p className="font-display text-3xl font-black">24 hr</p>
+                <p className="mt-1 text-sm font-bold leading-6 text-white/72">response target</p>
               </div>
             </div>
           </div>
@@ -69,6 +66,16 @@ export default function HomePage() {
         <div className="mx-auto grid w-[min(1160px,calc(100%_-_32px))] gap-3 rounded-brand border border-slate-200 bg-white p-3 shadow-lift md:grid-cols-3 lg:grid-cols-6">
           {trustProof.map((item) => (
             <div key={item} className="rounded-brand bg-clean px-4 py-5 text-center font-display text-sm font-black text-navy">
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-tight">
+        <div className="grid gap-4 rounded-brand border border-slate-200 bg-white p-4 shadow-soft md:grid-cols-3">
+          {["Lobby and entry presentation", "Restroom and breakroom readiness", "Touchpoint and trash closeout"].map((item) => (
+            <div key={item} className="rounded-brand bg-clean p-5 font-display text-lg font-black text-navy">
               {item}
             </div>
           ))}
