@@ -11,8 +11,11 @@ export const metadata: Metadata = {
 const afterSubmit = [
   "We review the business type, square footage, and preferred schedule.",
   "We coordinate a walkthrough time that works around your operating hours.",
-  "You receive a practical scope before any recurring service begins."
+  "You receive a practical scope before any recurring service begins.",
+  "Changes, supply notes, and access issues stay visible after service starts."
 ];
+
+const confidenceNotes = ["No instant booking required", "No obligation", "Proposal follows walkthrough", "Weekday evening and weekend options"];
 
 export default function ContactPage() {
   return (
@@ -40,6 +43,13 @@ export default function ContactPage() {
           <div className="mt-4 rounded-brand border border-slate-200 bg-[#eef3f1] p-5">
             <p className="font-display font-black text-navy">Preferred walkthrough times</p>
             <p className="mt-2 text-slate-600">Weekday evenings, Saturday, or Sunday.</p>
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {confidenceNotes.map((note) => (
+              <div key={note} className="rounded-brand border border-slate-200 bg-white p-4 font-display text-sm font-black text-navy shadow-sm">
+                {note}
+              </div>
+            ))}
           </div>
         </div>
         <WalkthroughForm />

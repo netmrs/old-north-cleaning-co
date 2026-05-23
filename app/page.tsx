@@ -1,32 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { WalkthroughForm } from "@/components/WalkthroughForm";
-import { operatingPrinciples, serviceAreas, services } from "@/lib/site";
-
-const proofItems = [
-  "Fully insured",
-  "Responsive communication",
-  "Flexible after-hours scheduling",
-  "Local Raleigh-based company"
-];
-
-const process = [
-  {
-    step: "01",
-    title: "Walk the space",
-    text: "We look at traffic, access, restrooms, floors, supplies, and the areas that create the most friction."
-  },
-  {
-    step: "02",
-    title: "Build the scope",
-    text: "You get a plain-language cleaning plan with frequency, included tasks, and priorities documented before service starts."
-  },
-  {
-    step: "03",
-    title: "Clean consistently",
-    text: "Recurring work follows the scope, with direct communication when something needs attention or the schedule changes."
-  }
-];
+import {
+  bestFitAudiences,
+  operatingPrinciples,
+  processSteps,
+  serviceAreaPages,
+  serviceNotes,
+  services,
+  trustProof
+} from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -70,13 +53,21 @@ export default function HomePage() {
                 <p className="mt-2 text-sm font-bold leading-6 text-white/72">Triangle markets served</p>
               </div>
             </div>
+            <div className="mt-4 rounded-brand border border-white/15 bg-white/10 p-5">
+              <p className="font-display text-sm font-black uppercase text-brass">Facility signals</p>
+              <div className="mt-4 grid gap-2 text-sm font-bold text-white/78">
+                <span>Lobby and entry presentation</span>
+                <span>Restroom and breakroom readiness</span>
+                <span>Touchpoint and trash closeout</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="-mt-8 relative z-10">
-        <div className="mx-auto grid w-[min(1160px,calc(100%_-_32px))] gap-3 rounded-brand border border-slate-200 bg-white p-3 shadow-lift md:grid-cols-4">
-          {proofItems.map((item) => (
+        <div className="mx-auto grid w-[min(1160px,calc(100%_-_32px))] gap-3 rounded-brand border border-slate-200 bg-white p-3 shadow-lift md:grid-cols-3 lg:grid-cols-6">
+          {trustProof.map((item) => (
             <div key={item} className="rounded-brand bg-clean px-4 py-5 text-center font-display text-sm font-black text-navy">
               {item}
             </div>
@@ -117,6 +108,26 @@ export default function HomePage() {
       </section>
 
       <section className="bg-white">
+        <div className="section grid gap-10 lg:grid-cols-[0.78fr_1.22fr]">
+          <div>
+            <p className="eyebrow">Best fit</p>
+            <h2 className="h2">Built for commercial buyers who need a cleaner system.</h2>
+            <p className="body-large mt-5">
+              The goal is not to sell every cleaning service. It is to make the right buyers feel like the process is clear before they reach out.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {bestFitAudiences.map((audience) => (
+              <article key={audience.title} className="rounded-brand border border-slate-200 bg-clean p-5 transition hover:-translate-y-1 hover:shadow-soft">
+                <h3 className="font-display text-2xl font-black text-navy">{audience.title}</h3>
+                <p className="mt-2 leading-7 text-slate-600">{audience.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
         <div className="section grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-end">
           <div>
             <p className="eyebrow">Why choose Old North</p>
@@ -135,16 +146,43 @@ export default function HomePage() {
       <section className="section">
         <div className="mb-10 max-w-3xl">
           <p className="eyebrow">How it works</p>
-          <h2 className="h2">A smoother start than a vague quote request.</h2>
+          <h2 className="h2">Walk. Scope. Clean. Report.</h2>
+          <p className="body-large mt-5">
+            A simple operating rhythm makes the sales process clearer and the recurring service easier to manage.
+          </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-3">
-          {process.map((item) => (
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {processSteps.map((item) => (
             <article key={item.step} className="surface p-6">
               <span className="text-sm font-black text-brass">{item.step}</span>
               <h3 className="mt-8 font-display text-2xl font-black text-navy">{item.title}</h3>
               <p className="mt-4 leading-8 text-slate-600">{item.text}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-navy text-white">
+        <div className="section">
+          <div className="mb-10 max-w-3xl">
+            <p className="eyebrow">Service notes</p>
+            <h2 className="font-display text-3xl font-black leading-tight md:text-5xl">Concrete examples beat vague claims.</h2>
+            <p className="mt-5 text-lg leading-8 text-white/75">
+              These are sample scope patterns, not fake case studies. They show buyers what a walkthrough turns into.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-3">
+            {serviceNotes.map((note) => (
+              <article key={note.space} className="rounded-brand border border-white/15 bg-white/10 p-6">
+                <p className="text-xs font-black uppercase text-brass">{note.frequency}</p>
+                <h3 className="mt-6 font-display text-2xl font-black">{note.space}</h3>
+                <p className="mt-4 text-sm font-bold uppercase text-white/55">Scope</p>
+                <p className="mt-2 leading-7 text-white/78">{note.scope}</p>
+                <p className="mt-5 text-sm font-bold uppercase text-white/55">Result</p>
+                <p className="mt-2 leading-7 text-white/78">{note.result}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -158,14 +196,14 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {serviceAreas.map((area) => (
+            {serviceAreaPages.map((area) => (
               <Link
-                key={area}
-                href={`/service-areas#${area.toLowerCase()}`}
+                key={area.slug}
+                href={`/service-areas/${area.slug}`}
                 className="group rounded-brand border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:shadow-soft"
               >
                 <span className="text-sm font-black uppercase text-brass">Commercial cleaning</span>
-                <span className="mt-2 block font-display text-3xl font-black text-navy group-hover:text-harbor">{area}</span>
+                <span className="mt-2 block font-display text-3xl font-black text-navy group-hover:text-harbor">{area.city}</span>
               </Link>
             ))}
           </div>

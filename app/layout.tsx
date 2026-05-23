@@ -4,6 +4,8 @@ import "@fontsource-variable/manrope";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { MobileStickyCTA } from "@/components/MobileStickyCTA";
+import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://oldnorthcleaning.co"),
@@ -29,9 +31,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <StructuredData />
         <Header />
         {children}
         <Footer />
+        <MobileStickyCTA />
       </body>
     </html>
   );

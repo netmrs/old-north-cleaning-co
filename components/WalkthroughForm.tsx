@@ -41,7 +41,7 @@ export function WalkthroughForm({ compact = false }: { compact?: boolean }) {
       <div className="md:col-span-2">
         <p className="text-sm font-black uppercase text-brass">Walkthrough request</p>
         <p className="mt-2 text-sm leading-6 text-slate-600">
-          Share enough detail to make the first call useful. No online booking pressure.
+          Share enough detail to make the first call useful. No instant booking, no obligation, and no pricing guesswork.
         </p>
       </div>
       <label className="field">
@@ -115,7 +115,7 @@ function messageForState(state: FormState) {
   if (state === "sent") return "Thanks. Your walkthrough request was sent.";
   if (state === "fallback") return "Your email app opened with the request details. Send it to complete the request.";
   if (state === "error") return "Something went wrong. Please email hello@oldnorthcleaning.co.";
-  return "This sends a walkthrough request. If email delivery is not configured yet, your email app will open instead.";
+  return "Proposal details come after the walkthrough, when the space and scope are clear.";
 }
 
 function openMailFallback(payload: Record<string, FormDataEntryValue>) {
